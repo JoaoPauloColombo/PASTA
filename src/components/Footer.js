@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import LogoImage from "../assetsFinal/logo.png";
-import { Link } from 'react-router-dom';
 
 const FooterContainer = styled.footer`
   height: 400px;
