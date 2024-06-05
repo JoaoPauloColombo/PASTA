@@ -1,166 +1,201 @@
 import React from 'react';
 import styled from 'styled-components';
-import LogoImage from "../assetsFinal/logo.png";
+import LogoImage from '../assets/images/logo.png';
 
-const FooterContainer = styled.footer`
-  height: 400px;
-  flex: 1 1 100vw;
-  display: flex;
-  flex-direction: column;
-  background-color: #136D58;
-  @media (max-width: 768px) {
-    height: auto;
-  }
-`;
-
-const Menu = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  @media (max-width: 768px) {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
-`;
-
-const LogoFooter = styled.div`
-  width: 500px;
-  height: 100%;
-  @media (max-width: 768px) {
-    width: 100%;
-    flex: 1;
-  }
-`;
-
-const LogoFooterImg = styled.img`
-  width: 200px;
-  height: 200px;
-  position: relative;
-  left: 5%;
-  @media (max-width: 768px) {
-    width: 150px;
-    height: 150px;
-    display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  }
-`;
-
-const LogoFooterP = styled.p`
-position: relative;
-    bottom: 25%;
-    left:10%;
-  width: 300px;
-  display: flex;
-  text-align: left;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 15px;
-  color: white;
-  font-weight: 800;
-  @media (max-width: 768px) {
-    display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  
-  }
-`;
-
-const Termos = styled.div`
+const Footerdiv = styled.footer`
+  height: 50vh;
+  background-color: rgb(8, 156, 201);
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  font-weight: 800;
-  background-color: #136D58;
+  justify-content: space-between;
+
   @media (max-width: 768px) {
+    display: flex;
     flex-direction: column;
+    height: auto;
+    text-align: center;
     align-items: center;
   }
 `;
 
-const FooterHr = styled.hr`
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+const Logo = styled.img`
+  height: 20vh;
+  width: 20vh;
+  position: relative;
+  right: auto;
+  left: 15%;
+
+  @media (max-width: 768px) {
+    left: 0;
+  }
+`;
+
+const Contato = styled.div`
+  width: 20%;
+`;
+
+const Horario = styled.p`
+  font-size: 2vh;
+  position: relative;
   width: 80%;
-  @media (max-width: 768px) {
-    width: 80%;
-  }
-`;
-const TermosP = styled.p`
-  padding: 20px;
-  color: white;
-  display: flex;
   text-align: center;
-  align-items: center;
-  justify-content: center;
+  margin-left: 7vh;
+  position:relative;
+  top:28%;
+  right:20%;
+
   @media (max-width: 768px) {
-    padding: 10px;
+    text-align: center;
+    margin-left: 2.9vh;
   }
 `;
 
-const Button = styled.a`
-  margin-top: 20px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-  padding-block: 1rem;
-  padding-inline: 1.25rem;
-  background-color: #136d58;
-  border-radius: 9999px;
+const Numero = styled.p`
+  font-size: 2vh;
+  position: relative;
+  top:25%;
+  right:10%;
+  width: 80%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
-  color: #ffff;
-  gap: 10px;
-  font-weight: bold;
-  border: 3px solid #ffffff4d;
-  outline: none;
-  overflow: hidden;
-  font-size: 15px;
+  margin-left: 2vh;
+  color: white;
+
+`;
+
+const Informacoes = styled.p`
+  font-size: 2vh;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin-left: 2.5vh;
+  position: relative;
+  top:25%;
+  right:10%;
+`;
+
+const Endereco = styled.p`
+  font-size: 2vh;
+  position: relative;
+  top:25%;
+  right:10%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin-left: 2.5vh;
+  color: white;
+`;
+
+const Links = styled.div`
+  width: 20%;
+  position: relative;
+  top: 10%;
+`;
+
+const LinksH1 = styled.h1`
+  font-size: 3vh;
+  color: white;
+  text-align: center;
+`;
+
+const LinksA = styled.a`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2vh;
+  text-align: center;
+  font-size: 2vh;
   text-decoration: none;
-  align-self: center;
+  color: black;
+
+  &:hover {
+    color: #405de6;
+  }
 `;
 
-const Icon = styled.svg`
-  fill: #ffffff;
-  height: 16px;
-  width: 16px;
+const Categorias = styled.div`
+  width: 20%;
+  position: relative;
+  top: 10%;
 `;
 
-function Footer() {
+const CategoriasH1 = styled.h1`
+  font-size: 3vh;
+  color: white;
+  text-align: center;
+`;
+
+const CategoriasA = styled.a`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2vh;
+  text-align: center;
+  font-size: 2vh;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    color: #405de6;
+  }
+`;
+
+const Verifique = styled.div`
+  width: 20%;
+  position: relative;
+  top: 10%;
+`;
+
+const VerifiqueH1 = styled.h1`
+  font-size: 3vh;
+  color: white;
+  text-align: center;
+`;
+
+const VerifiqueA = styled.a`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2vh;
+  text-align: center;
+  font-size: 2vh;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    color: #405de6;
+  }
+`;
+
+const Footer = () => {
   return (
-    <FooterContainer>
-      <Menu>
-        <LogoFooter>
-          <LogoFooterImg src={LogoImage} alt="" />
-          <LogoFooterP>Construindo cidades sustentáveis, conectadas e resilientes para um futuro próspero.</LogoFooterP>
-        </LogoFooter>
-      </Menu>
-      <FooterHr />
-      <Termos>
-        <TermosP>© ECOmunidades 2024</TermosP>
-        <TermosP>Termos de serviço</TermosP>
-        <TermosP>Politica de Privacidade</TermosP>
-        <TermosP><Button href="https://regeneracaoglobal.com/home#googtrans(pt)">
-            Link ONG
-            <Icon viewBox="0 0 24 24" class="icon">
-              <path clip-rule="evenodd"
-                d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                fill-rule="evenodd"></path>
-            </Icon>
-          </Button>
-</TermosP>
-      </Termos>
-    </FooterContainer>
+    <Footerdiv>
+      <Logo src={LogoImage} alt="" />
+      <Contato>
+        <Horario>Tem dúvidas, estamos disponiveis 24h por dia</Horario>
+        <Numero>+11976645574</Numero>
+        <Informacoes>Informações de contato</Informacoes>
+        <Endereco>São Paulo, São Paulo, Brasil</Endereco>
+      </Contato>
+      <Links>
+        <LinksH1>Links Importantes</LinksH1>
+        <LinksA href="#">Acompanhar pedidos</LinksA>
+        <LinksA href="#">Minha conta</LinksA>
+        <LinksA href="#">Comprar</LinksA>
+        <LinksA href="#">Todas as Lojas</LinksA>
+      </Links>
+      <Categorias>
+        <CategoriasH1>Principais Categorias</CategoriasH1>
+        <CategoriasA href="#">Cameras, Audio & Video</CategoriasA>
+        <CategoriasA href="#">Computadores & Acessórios </CategoriasA>
+        <CategoriasA href="#">Mobiles & Tablets</CategoriasA>
+        <CategoriasA href="#">Celulares & Video Games</CategoriasA>
+      </Categorias>
+      <Verifique>
+        <VerifiqueH1>Verifique</VerifiqueH1>
+        <VerifiqueA href="#">Perguntas Frequentes</VerifiqueA>
+        <VerifiqueA href="#">Contate-nos</VerifiqueA>
+        <VerifiqueA href="#">Termos e Condiçôes</VerifiqueA>
+      </Verifique>
+    </Footerdiv>
   );
-}
+};
 
 export default Footer;
