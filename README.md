@@ -1,4 +1,5 @@
-# ECOmunidades
+# ELETRONET
+
 Bem-vindo ao nosso site dedicado à ODS 11 - Cidades e Comunidades Sustentáveis! Aqui você encontrará recursos valiosos, informações relevantes e inspiração para promover o desenvolvimento urbano sustentável em todo o mundo.
 ## O que é a ODS 11?
 A ODS 11 é uma das 17 metas estabelecidas pelas Nações Unidas como parte da Agenda 2030 para o Desenvolvimento Sustentável. Ela visa tornar as cidades e comunidades mais inclusivas, seguras, resilientes e sustentáveis até 2030.
