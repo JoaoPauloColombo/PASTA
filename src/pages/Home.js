@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// import Main from '../components/Main';
+import Main from '../components/Main';
 // import Numeros from '../components/Numeros';
 // import Projetos from '../components/Projetos';
 // import Noticias from '../components/Noticias';
@@ -17,6 +17,7 @@ function Home(){
     return(
         <HomeContainer>
             <Header/>
+            <Main/>
             <Footer/>
         </HomeContainer>
     );

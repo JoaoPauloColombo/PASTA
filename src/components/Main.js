@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import MainImage from "../assetsFinal/main-image.png";
 
+
+
 const MainContainer = styled.div`
   position: relative;
   height: 600px;
