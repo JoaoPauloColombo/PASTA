@@ -1,30 +1,23 @@
-import './css/Main.css'
-import {} from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { CCarousel,CCarouselItem,CImage  } from '@coreui/react'
+import '@coreui/coreui/dist/css/coreui.min.css'
 
-const data = [
-  { id: "1", image: '../assets/images/Main1.png' },
-  { id: "2", image: '../assets/images/Main2.png' },
-  { id: "3", image: '../assets/images/Main3.png' },
-  { id: "4", image: '../assets/images/Main4.png' },
+import ImgMain1 from '../assets/images/Main1.png'
+import ImgMain2 from '../assets/images/Main2.png'
+import ImgMain3 from '../assets/images/Main3.png'
 
-]
-function Main() {
+function Main() { 
   return (
-    <Swiper
-      slidesPerview={1}
-      pagination ={{clickable:true}}
-      navigation
-      >
-      {data.map ( (item) => (
-        <SwiperSlide key={item.id}>
-          <img src={item.image} 
-          alt="Slider"
-          className="slide-item"/>
-
-        </SwiperSlide>
-      ))}
-    </Swiper>
+<CCarousel controls>
+  <CCarouselItem>
+    <CImage className="d-block h-20 w-100" src={ImgMain1} alt="slide 1" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block h-20 w-100" src={ImgMain2} alt="slide 2" />
+  </CCarouselItem>
+  <CCarouselItem>
+    <CImage className="d-block h-20 w-100" src={ImgMain3} alt="slide 3" />
+  </CCarouselItem>
+</CCarousel>
   );
 }
 
